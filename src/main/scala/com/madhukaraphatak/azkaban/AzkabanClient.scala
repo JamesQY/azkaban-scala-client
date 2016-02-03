@@ -26,8 +26,8 @@ import scala.util.Try
 case class AzkabanContext(sessionId:String,configuration:Config)
 
 class AzkabanClient(url:String,
-                    implicit val configuration: Config = AzkabanUtil.getDefaultConfiguration(),
-                   implicit val system: ActorSystem, implicit  val materializer: ActorMaterializer,
+                    implicit val configuration: Config = AzkabanUtil.getDefaultConfiguration())
+                   (implicit val system: ActorSystem, implicit  val materializer: ActorMaterializer,
                    implicit val executionContext:ExecutionContext) {
 
   val httpClient = Http()
