@@ -98,9 +98,11 @@ class AzkabanClient(url:String,
   def scheduleFlow(scheduleFlowRequest: ScheduleFlowRequest)(implicit context:AzkabanContext):Try[ScheduleFlowResponse] = {
 
     val projectId = getProjectIdByProjectName(scheduleFlowRequest.projectName)(context).get
+    val recurringFlag = scheduleFlowRequest.repeats.fold("off")(value=>"on")
+    val period = s"${scheduleFlowRequest.repeats.fold("")(value=>value)}${scheduleFlowRequest.repeatUnit.fold("")(v=>v)}"
     val requestData = s"session.id=${context.sessionId}&ajax=scheduleFlow&&projectName=${scheduleFlowRequest.projectName}"+
       s"&flow=${scheduleFlowRequest.flowName}&projectId=$projectId&scheduleTime=${scheduleFlowRequest.startTime}" +
-      s"&scheduleDate=${scheduleFlowRequest.startDate}"
+      s"&scheduleDate=${scheduleFlowRequest.startDate}&is_recurring=$recurringFlag&period=$period"
     val executeRequest = HttpRequest(
       HttpMethods.GET,
       uri = url + s"/schedule?$requestData"
