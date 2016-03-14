@@ -31,17 +31,17 @@ publishTo <<= version { (v: String) =>
 }
 
 pomExtra := (
-  <url>https://github.com/phatak-dev/java-sizeof</url>
+  <url>https://github.com/phatak-dev/azkaban-scala-client</url>
     <licenses>
       <license>
         <name>Apache 2.0</name>
-        <url>https://github.com/phatak-dev/java-sizeof/blob/master/LICENSE.txt</url>
+        <url>https://github.com/phatak-dev/azkaban-scala-client/blob/master/LICENSE.txt</url>
         <distribution>repo</distribution>
       </license>
     </licenses>
     <scm>
       <url>git@github.com:phatak-dev/java-sizeof.git</url>
-      <connection>scm:git:git@github.com:phatak-dev/java-sizeof.git</connection>
+      <connection>scm:git:git@github.com:phatak-dev/azkaban-scala-client.git</connection>
     </scm>
     <developers>
       <developer>
