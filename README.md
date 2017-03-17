@@ -4,16 +4,16 @@ This is scala client for Azkaban scheduler.
 
 ###Sbt
 
-    libraryDependencies += "com.madhukaraphatak" %% "azkaban-client" % "0.1-SNAPSHOT"
+    libraryDependencies += "com.madhukaraphatak" %% "azkaban-client" % "0.2-SNAPSHOT"
 
-supported for both 2.10 and 2.11.
+supported for 2.11.
 
 ###Maven
 
      <dependency>
      <groupId>com.madhukaraphatak</groupId>
      <artifactId>azkaban-client</artifactId>
-     <version>0.1-SNAPSHOT</version>
+     <version>0.2-SNAPSHOT</version>
      </dependency>
 
 ## Usage

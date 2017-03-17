@@ -4,12 +4,12 @@ organization :="com.madhukaraphatak"
 
 name := "azkaban-client"
 
-version := "0.1-SNAPSHOT"
+version := "0.2-SNAPSHOT"
 
-crossScalaVersions := Seq("2.10.0","2.11.0")
+scalaVersion := "2.11.8"
 
-libraryDependencies ++= Seq("com.typesafe.akka" %% "akka-http-core-experimental" % "2.0.2",
-  "com.typesafe.akka" %% "akka-http-spray-json-experimental" % "2.0.2",
+libraryDependencies ++= Seq("com.typesafe.akka" %% "akka-http-core" % "10.0.4",
+  "com.typesafe.akka" %% "akka-http-spray-json" % "10.0.4",
   "org.slf4j" % "slf4j-log4j12" %"1.6.6")
 
 
